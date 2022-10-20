@@ -25,7 +25,7 @@ while True:
 
 
 ### Evidence
-xel](https://user-images.githubusercontent.com/112962044/196989630-ae9feee7-803e-4c8f-96a5-2e356e2bec94.jpg)
+![circuitpython_Cat_code_py_Hello_World](https://user-images.githubusercontent.com/112962044/196995655-90f2caa2-a835-4448-9f52-2849d2f1b054.png)
 
 
 Image credit goes to [Adafruit](https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/circuitpython-programming-basics)
@@ -72,12 +72,13 @@ while True:
 ### Evidence
 
 ![Servo_Code_GIF](https://user-images.githubusercontent.com/112962044/196994088-11661c96-7e4b-451e-98c3-4536bcc83a99.gif)
-    Gif Credit goes to Cyrus (https://github.com/cwyatt29/CircutPython)
+   
+ Gif Credit goes to Cyrus (https://github.com/cwyatt29/CircutPython)
 ### Wiring
 ![image](https://user-images.githubusercontent.com/112962044/196994546-1cc2e3e9-80b0-4736-b569-d185ac06a4dc.png)
 
 ### Reflection
-I had one problem with writing the pin for the servo. I didn't know that you had to put a dot and write a D for analog pins so I learned that. For example, I plugged the servo in pin 2, so I had to write D2. to command it on pin 2. 
+I had one problem with writing the pin for the servo. I didn't know that you had to put a dot and write a D for analog pins so I learned that. For example, I plugged the servo in pin 2, so I had to write .D2, to command it on pin 2. 
 
 
 ## CircuitPython_LCD
