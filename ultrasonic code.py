@@ -6,7 +6,7 @@ import simpleio                     #imported lib
 
 sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D11, echo_pin=board.D12)
 dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
-dot.brightness = 0.2               #setting up ultrasonic and neopixel
+dot.brightness = 0.2               #setting up ultrasonic and neopixel   .
 
 while True:
     try:
