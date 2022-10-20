@@ -13,27 +13,22 @@ This repository will actually serve as a aid to help you get started with your o
 ## Hello_CircuitPython
 
 ### Description & Code
-I coded for the board to change the neopixel color to red
+I coded for the board to say hi on the serial monitor.
 
 ```python
-import board
-import neopixel
-
-dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
-dot.brightness = 0.5 
-
-print("Make it red!")
+from time import sleep
 
 while True:
-    dot.fill((255, 0, 0))   
+    print("Hi")
+    sleep(1)   
 ```
 
 
 ### Evidence
-![circuitpython_CLUE_Badge_red_neopixel](https://user-images.githubusercontent.com/112962044/196989630-ae9feee7-803e-4c8f-96a5-2e356e2bec94.jpg)
+xel](https://user-images.githubusercontent.com/112962044/196989630-ae9feee7-803e-4c8f-96a5-2e356e2bec94.jpg)
 
 
-Image credit goes to [Adafruit](https://learn.adafruit.com/clue-custom-circuit-python-badge/pybadger-colors)
+Image credit goes to [Adafruit](https://learn.adafruit.com/getting-started-with-raspberry-pi-pico-circuitpython/circuitpython-programming-basics)
 
 
 
@@ -43,7 +38,7 @@ Image credit goes to [Adafruit](https://learn.adafruit.com/clue-custom-circuit-p
  Wiring is really simple just plug in a USB wire to the board and the computer.
 
 ### Reflection
-I accidentally wrote the wrong RGB value for blue when I actually needed red. So I got a bad grade then I learned to fix the value and make sure it's correct. 
+I didn't have any problems with this assignment because it was an easy one.
 
 
 
