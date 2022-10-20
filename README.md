@@ -38,11 +38,12 @@ Image credit goes to [Adafruit](https://learn.adafruit.com/clue-custom-circuit-p
 
 
 ### Wiring
-Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
-Then post an image here.   [here's a quick tutorial for all markdown code, like making links](https://guides.github.com/features/mastering-markdown/)
+![Screenshot 2022-10-20 112152](https://user-images.githubusercontent.com/112962044/196990545-22f2c92a-532f-4ee6-b455-92e79ca538ed.png)
+ 
+ Wiring is really simple just plug in a USB wire to the board and the computer.
 
 ### Reflection
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience?  Your ultimate goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person.
+I accidentally wrote the wrong RGB value for blue when I actually needed red. So I got a bad grade then I learned to fix the value and make sure it's correct. 
 
 
 
