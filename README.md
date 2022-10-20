@@ -32,12 +32,10 @@ while True:
 ### Evidence
 
 
-![spinningMetro_Optimized](https://user-images.githubusercontent.com/54641488/192549584-18285130-2e3b-4631-8005-0792c2942f73.gif)
-
 
 And here is how you should give image credit to someone, if you use their work:
 
-Image credit goes to [Rick A](https://www.youtube.com/watch?v=dQw4w9WgXcQ&scrlybrkr=8931d0bc)
+Image credit goes to [Adafruit](https://learn.adafruit.com/clue-custom-circuit-python-badge/pybadger-colors)
 
 
 
