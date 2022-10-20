@@ -30,10 +30,8 @@ while True:
 
 
 ### Evidence
+![circuitpython_CLUE_Badge_red_neopixel](https://user-images.githubusercontent.com/112962044/196989630-ae9feee7-803e-4c8f-96a5-2e356e2bec94.jpg)
 
-
-
-And here is how you should give image credit to someone, if you use their work:
 
 Image credit goes to [Adafruit](https://learn.adafruit.com/clue-custom-circuit-python-badge/pybadger-colors)
 
