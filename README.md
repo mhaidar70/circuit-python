@@ -13,7 +13,7 @@ This repository will actually serve as a aid to help you get started with your o
 ## Hello_CircuitPython
 
 ### Description & Code
-I coded for the board to change the neopixel co,lor to red
+I coded for the board to change the neopixel color to red
 
 ```python
 import board
