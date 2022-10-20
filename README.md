@@ -13,9 +13,7 @@ This repository will actually serve as a aid to help you get started with your o
 ## Hello_CircuitPython
 
 ### Description & Code
-Description goes here
-
-Here's how you make code look like code:
+I coded for the board to change the neopixel co,lor to red
 
 ```python
 import board
