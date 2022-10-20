@@ -71,13 +71,13 @@ while True:
 
 ### Evidence
 
-Pictures / Gifs of your work should go here.  You need to communicate what your thing does.
-
+![Servo_Code_GIF](https://user-images.githubusercontent.com/112962044/196994088-11661c96-7e4b-451e-98c3-4536bcc83a99.gif)
+    Gif Credit goes to Cyrus (https://github.com/cwyatt29/CircutPython)
 ### Wiring
+![image](https://user-images.githubusercontent.com/112962044/196994546-1cc2e3e9-80b0-4736-b569-d185ac06a4dc.png)
 
 ### Reflection
-
-
+I had one problem with writing the pin for the servo. I didn't know that you had to put a dot and write a D for analog pins so I learned that. For example, I plugged the servo in pin 2, so I had to write D2. to command it on pin 2. 
 
 
 ## CircuitPython_LCD
