@@ -202,5 +202,7 @@ https://user-images.githubusercontent.com/112962044/197234116-0a9dd273-31cd-479e
 
 
 ### Wiring
+![image](https://user-images.githubusercontent.com/112962044/197234381-6ed7742e-0628-4f3c-b8d1-24ea12840b43.png)
 
 ### Reflection
+I made plenty of mistakes from this assignment and I'm glad I made those and now I have learned from it. I learned a new libarary and how it can help me in the future as well. What I mainly learned from this assignment was to keep trying and asking for help and having patience. I was worrying that I might not finish this ever and I'm going to get an F on it, but I had to re-collect myself and think positive that I will finish it. I had to get help from a few friends and learned from them. But most importantly, I shouldn't stress too much about the assignments. If I use what I learned and try my best, and especially get help from other sources can really make things faster and easier for me. It was getting me frustrated about not being able to finish it, but in the end I made it through.
