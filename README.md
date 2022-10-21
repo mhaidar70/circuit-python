@@ -86,18 +86,67 @@ I had one problem with writing the pin for the servo. I didn't know that you had
 ### Description & Code
 
 ```python
-Code goes here
+import board
+from lcd.lcd import LCD
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+from digitalio import DigitalInOut, Direction, Pull 
+
+#sets buttons and switch as Inputs 
+btn= DigitalInOut(board.D2)
+btn.direction = Direction.INPUT
+btn.pull = Pull.DOWN
+switch = DigitalInOut(board.D10)
+switch.direction = Direction.INPUT
+switch.pull = Pull.UP
+
+# get and i2c object
+i2c = board.I2C()
+
+# some LCDs are 0x3f... some are 0x27.
+lcd = LCD(I2CPCF8574Interface(i2c, 0x27), num_rows=2, num_cols=16)
+
+value = 0 #sets the value to 0 to count up from there
+change=1 #variable used to change value
+SwitchState = switch.value
+
+lcd.print("Button:") 
+lcd.set_cursor_pos(0,8) #sets position of the LCD in the 2 by 16 grid
+
+prev_state = btn.value
+
+while True: #sets button to add up and not count when held down
+    cur_state = btn.value
+    if cur_state != prev_state:
+        if not cur_state:
+            value = value + change
+            lcd.set_cursor_pos(0,8)
+            lcd.print(str(value))
+    if switch.value == True: # prints switch is up if switch value is true
+      lcd.set_cursor_pos(1,0)
+      lcd.print("Up  ")
+      change = 1 #increases value
+    else: #if the switch isn't true then it prints "down"
+      lcd.set_cursor_pos(1,0) 
+      lcd.print("Down")
+      change = -1 #decreases value
+    prev_state = cur_state
+  
+
 
 ```
 
 ### Evidence
 
-Pictures / Gifs of your work should go here.  You need to communicate what your thing does.
+
+https://user-images.githubusercontent.com/112962044/197225605-ef2e2c80-1eee-4576-9795-3a2e115f52c0.mp4
+
+
 
 ### Wiring
+![image](https://user-images.githubusercontent.com/112962044/197226060-e3298a90-a974-482b-9369-7a12bdccdef5.png)
 
 ### Reflection
-
+I had a few problems with this assignment as I usually do. One of them was that I didn't have the neccessary libraries downloaded and installed into my circuit python library. I found this out when it kept saying that an import line is wrong or not working and that was because the library didn't even exist in the circuit python's  inventory. After I got the right ones, then the wrong part of the code worked well. Also another mistake to learn from was that I didn't read the instructions carefully. I got this code then uploaded it and it worked but what I didn't remember to do was to get the button to get the value that was shown on the LCD to change. When I changed the switch then it would count up or down based on the postition of the switch. I only got it to increase the value but it wasn't going down, so I had to edit my code. So I added value variable which was what the number was written on the LCD, and change variable was what would make the value increase or decrease. So  to sum it all up, I need to pay extra attention to the instructions and make sure that I have completed all the requirements.
 
 
 
