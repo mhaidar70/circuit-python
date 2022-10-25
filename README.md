@@ -36,7 +36,7 @@ Image credit goes to [Adafruit](https://learn.adafruit.com/getting-started-with-
  Wiring is really simple just plug in a USB wire to the board and the computer.
 
 ### Reflection
-I didn't have any problems with this assignment because it was an easy one.
+I didn't have any problems with this assignment because it was an easy one. My mind got refreshed and I remembered how to do Engineering stuff.
 
 
 
@@ -51,7 +51,6 @@ import time
 import board
 import pwmio
 from adafruit_motor import servo
-
 # create a PWMOut object on Pin A2.
 pwm = pwmio.PWMOut(board.D2, duty_cycle=2 ** 15, frequency=50)
 # Create a servo object, my_servo.
@@ -67,6 +66,7 @@ while True:
 
 ```
 
+code for the servo to spin around and around
 ### Evidence
 
 ![Servo_Code_GIF](https://user-images.githubusercontent.com/112962044/196994088-11661c96-7e4b-451e-98c3-4536bcc83a99.gif)
@@ -75,6 +75,7 @@ while True:
 ### Wiring
 ![image](https://user-images.githubusercontent.com/112962044/196994546-1cc2e3e9-80b0-4736-b569-d185ac06a4dc.png)
 
+Yellow goes to a third pin on th esrvo and a pin on the board, and red goes to middle pin on the servo and 5V to the board, and brown goes to the first and GND.
 ### Reflection
 I had one problem with writing the pin for the servo. I didn't know that you had to put a dot and write a D for analog pins so I learned that. For example, I plugged the servo in pin 2, so I had to write .D2, to command it on pin 2. 
 
@@ -132,17 +133,18 @@ while True: #sets button to add up and not count when held down
 
 
 ```
-
+Code for the LCD 
 ### Evidence
 
 
 https://user-images.githubusercontent.com/112962044/197225605-ef2e2c80-1eee-4576-9795-3a2e115f52c0.mp4
 
-
+Video of the LCD changing values
 
 ### Wiring
 ![image](https://user-images.githubusercontent.com/112962044/197226060-e3298a90-a974-482b-9369-7a12bdccdef5.png)
 
+Pretty easy wiring as long as it's followed correctly.
 ### Reflection
 I had a few problems with this assignment as I usually do. One of them was that I didn't have the neccessary libraries downloaded and installed into my circuit python library. I found this out when it kept saying that an import line is wrong or not working and that was because the library didn't even exist in the circuit python's  inventory. After I got the right ones, then the wrong part of the code worked well. Also another mistake to learn from was that I didn't read the instructions carefully. I got this code then uploaded it and it worked but what I didn't remember to do was to get the button to get the value that was shown on the LCD to change. When I changed the switch then it would count up or down based on the postition of the switch. I only got it to increase the value but it wasn't going down, so I had to edit my code. So I added value variable which was what the number was written on the LCD, and change variable was what would make the value increase or decrease. So  to sum it all up, I need to pay extra attention to the instructions and make sure that I have completed all the requirements.
 
@@ -194,15 +196,17 @@ while True:
     time.sleep(0.1)                                      #debounce
 
 ```
-
+Code for the ultrasonic sensor to change colors
 ### Evidence
 
 
 https://user-images.githubusercontent.com/112962044/197234116-0a9dd273-31cd-479e-b713-c22cf6dbfd58.mp4
 
-
+Vdeo of the board changing color as the sensor moves closer and farther from the screen. 
 ### Wiring
 ![image](https://user-images.githubusercontent.com/112962044/197234381-6ed7742e-0628-4f3c-b8d1-24ea12840b43.png)
+
+Very simple wiring of the sensor to the board
 
 ### Reflection
 I made plenty of mistakes from this assignment and I'm glad I made those and now I have learned from it. I learned a new libarary and how it can help me in the future as well. What I mainly learned from this assignment was to keep trying and asking for help and having patience. I was worrying that I might not finish this ever and I'm going to get an F on it, but I had to re-collect myself and think positive that I will finish it. I had to get help from a few friends and learned from them. But most importantly, I shouldn't stress too much about the assignments. If I use what I learned and try my best, and especially get help from other sources can really make things faster and easier for me. It was getting me frustrated about not being able to finish it, but in the end I made it through.
