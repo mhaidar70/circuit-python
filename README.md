@@ -247,6 +247,11 @@ Evidence
 
 ![motor control](https://user-images.githubusercontent.com/112962044/200892691-90831f45-2461-4f91-9892-5b1d8aa2d0e1.png)
 
+
+
+https://user-images.githubusercontent.com/112962044/200895770-5ac0f991-fda3-4b18-968d-640267e4c671.mov
+
+
 ## Reflection
 
 I learned a very useful thing about wiring, and that is to keep it neat. Make one side of the board an circuitpython side and the other side make it like a motor side. So the circuit python side would have things that have to do with a lot of wiring and code, and the other side will have the wiring for the motor. This way the board looks neater and our brain can see it from a clean persepective and complete the assignment easily. A new idea that I learned from Mr. H was to write the comments first then the codes. Write the stuff it needs like "read potentionmeter" then I would figure out what the code would be to read the potentiometer. This was a very easy and effective way the we got the motor to  move the way we wanted it to move. 
