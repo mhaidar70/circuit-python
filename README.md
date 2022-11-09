@@ -5,7 +5,7 @@ Directory of all students! (https://github.com/chssigma/Class_Accounts).
 * [Hello_CircuitPython](#Hello_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython_LCD](#CircuitPython_LCD)
-* [NextAssignmentGoesHere](#NextAssignment)
+* Motor Control
 ---
 
 ## Hello_CircuitPython
@@ -155,6 +155,8 @@ I had a few problems with this assignment as I usually do. One of them was that 
 
 ### Description & Code
 
+We had to use a ultrasonic sensor to change the color of the neopixel on the Metro board based on the how far it was from an object.
+
 ```python
 import time
 import board
@@ -210,3 +212,41 @@ Very simple wiring of the sensor to the board
 
 ### Reflection
 I made plenty of mistakes from this assignment and I'm glad I made those and now I have learned from it. I learned a new libarary and how it can help me in the future as well. What I mainly learned from this assignment was to keep trying and asking for help and having patience. I was worrying that I might not finish this ever and I'm going to get an F on it, but I had to re-collect myself and think positive that I will finish it. I had to get help from a few friends and learned from them. But most importantly, I shouldn't stress too much about the assignments. If I use what I learned and try my best, and especially get help from other sources can really make things faster and easier for me. It was getting me frustrated about not being able to finish it, but in the end I made it through.
+
+
+## Motor Control
+
+### Description and Code
+THis assignment had us to increase or decrease a motor's power using a potentiometer.
+
+
+```python
+import time
+import board
+import analogio
+
+# we're going to use a potentiometer to control the speed of a motor, no motor controller is used.
+
+#Variables for analog in, for the pot... analogOUT
+potentiometer = analogio.AnalogIn(board.A5)  # potentiometer connected to A1, power & ground
+motor = analogio.AnalogOut(board.A0)
+
+
+while True:
+    # read the potentiometer
+    motorVal = potentiometer.value
+    print(motorVal)
+
+    # write to the motor , using the pot values
+    motor.value = motorVal
+
+    time.sleep(.1)
+```
+
+Evidence
+
+![motor control](https://user-images.githubusercontent.com/112962044/200892691-90831f45-2461-4f91-9892-5b1d8aa2d0e1.png)
+
+## Reflection
+
+I learned a very useful thing about wiring, and that is to keep it neat. Make one side of the board an circuitpython side and the other side make it like a motor side. So the circuit python side would have things that have to do with a lot of wiring and code, and the other side will have the wiring for the motor. This way the board looks neater and our brain can see it from a clean persepective and complete the assignment easily. A new idea that I learned from Mr. H was to write the comments first then the codes. Write the stuff it needs like "read potentionmeter" then I would figure out what the code would be to read the potentiometer. This was a very easy and effective way the we got the motor to  move the way we wanted it to move. 
