@@ -5,7 +5,8 @@ Directory of all students! (https://github.com/chssigma/Class_Accounts).
 * [Hello_CircuitPython](#Hello_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython_LCD](#CircuitPython_LCD)
-* Motor Control
+* [Motor Control](#Motor_Control)
+
 ---
 
 ## Hello_CircuitPython
