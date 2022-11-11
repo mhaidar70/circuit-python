@@ -215,7 +215,7 @@ Very simple wiring of the sensor to the board
 I made plenty of mistakes from this assignment and I'm glad I made those and now I have learned from it. I learned a new libarary and how it can help me in the future as well. What I mainly learned from this assignment was to keep trying and asking for help and having patience. I was worrying that I might not finish this ever and I'm going to get an F on it, but I had to re-collect myself and think positive that I will finish it. I had to get help from a few friends and learned from them. But most importantly, I shouldn't stress too much about the assignments. If I use what I learned and try my best, and especially get help from other sources can really make things faster and easier for me. It was getting me frustrated about not being able to finish it, but in the end I made it through.
 
 
-## Motor Control
+## Motor_Control
 
 ### Description and Code
 THis assignment had us to increase or decrease a motor's power using a potentiometer.
