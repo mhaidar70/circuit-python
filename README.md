@@ -301,5 +301,6 @@ while True:
         lcd.print(message)
     oldTemp = temp
     time.sleep(1)
-    
+    ```
+
 ### Wiring and Evidence
