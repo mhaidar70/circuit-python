@@ -244,7 +244,7 @@ while True:
     time.sleep(.1)
 ```
 
-Evidence
+### Evidence
 
 ![motor control](https://user-images.githubusercontent.com/112962044/200892691-90831f45-2461-4f91-9892-5b1d8aa2d0e1.png)
 
@@ -302,3 +302,4 @@ while True:
     oldTemp = temp
     time.sleep(1)
     ```
+### Wiring and Evidence
