@@ -6,7 +6,7 @@ Directory of all students! (https://github.com/chssigma/Class_Accounts).
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython_LCD](#CircuitPython_LCD)
 * [Motor Control](#Motor_Control)
-
+* [Temperature Sensor](#Temperature_Sensor)
 ---
 
 ## Hello_CircuitPython
@@ -218,7 +218,7 @@ I made plenty of mistakes from this assignment and I'm glad I made those and now
 ## Motor_Control
 
 ### Description and Code
-THis assignment had us to increase or decrease a motor's power using a potentiometer.
+This assignment had us to increase or decrease a motor's power using a potentiometer.
 
 
 ```python
@@ -259,3 +259,46 @@ https://user-images.githubusercontent.com/112962044/200897575-1eedadb5-9949-48f6
 ## Reflection
 
 I learned a very useful thing about wiring, and that is to keep it neat. Make one side of the board an circuitpython side and the other side make it like a motor side. So the circuit python side would have things that have to do with a lot of wiring and code, and the other side will have the wiring for the motor. This way the board looks neater and our brain can see it from a clean persepective and complete the assignment easily. A new idea that I learned from Mr. H was to write the comments first then the codes. Write the stuff it needs like "read potentionmeter" then I would figure out what the code would be to read the potentiometer. This was a very easy and effective way the we got the motor to  move the way we wanted it to move. 
+
+## Temperature Sensor
+
+### Description and Code
+I had to code a TMP36 sensor to tell me the temperature and if it's between a certain interval it will show on the LCD if it's too hot, too cold, or just right. 
+
+
+```python
+import board
+from lcd.lcd import LCD # lcd libraries
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+import analogio
+import simpleio # map library
+import time
+
+i2c = board.I2C() # lcd declaration
+lcd = LCD(I2CPCF8574Interface(i2c, 0x3f), num_rows=2, num_cols=16)
+
+tempSensor = analogio.AnalogIn(board.A0) # connects temp sensor
+
+temp = 74 # temperature
+oldTemp = 0 # reload variable
+message = " "
+
+while True:
+    temp = int(simpleio.map_range(tempSensor.value,0,65535,32,212)) # maps values to Fahrenheit
+    if (oldTemp != temp): # checks if needs to reprint lcd text
+        if (temp <= 66): # if temp lower than 70
+         message = "Too cold!"
+        elif (temp >= 66): #if temo  higher than 70
+            message = "Too hot!"
+        else: # if temp 60-65
+            message = "Just right"
+        lcd.clear()
+        lcd.set_cursor_pos(0,0)
+        lcd.print(str(temp)) # prints temp
+        lcd.set_cursor_pos(0,3)
+        lcd.print("deg F")
+        lcd.set_cursor_pos(1,0)
+        lcd.print(message)
+    oldTemp = temp
+    time.sleep(1)
+    ```
