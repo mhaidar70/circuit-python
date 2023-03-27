@@ -7,6 +7,8 @@ Directory of all students! (https://github.com/chssigma/Class_Accounts).
 * [CircuitPython_LCD](#CircuitPython_LCD)
 * [Motor Control](#Motor_Control)
 * [Temperature Sensor](#Temperature_Sensor)
+* [Rotary Encoder](#Rotary Encoder)
+
 ---
 
 ## Hello_CircuitPython
@@ -312,3 +314,72 @@ https://user-images.githubusercontent.com/112962044/227572134-3823a69d-66df-447f
 ## Reflection
 
 For this assignment I used a normal switch to control the power of the LCD because it was sucking up too much power so it was in the way of the code to run to the board. To fix this, we used a breadboard switch which is very useful and great. Of course, I didn't know what it was but I asked the teacher and learned to use breadboard switch.
+
+## Rotary Encoder
+
+### Description and Code 
+
+
+```python
+import board
+from lcd.lcd import LCD # lcd libraries
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+import rotaryio # rotary encoder library
+import digitalio # led library
+import time
+
+i2c = board.I2C() # lcd declaration
+lcd = LCD(I2CPCF8574Interface(i2c, 0x3f), num_rows=2, num_cols=16)
+
+encoder = rotaryio.IncrementalEncoder(board.D3,board.D4) # rotary encoder potentiometer
+
+button = digitalio.DigitalInOut(board.D2) # rotary  button
+button.pull = digitalio.Pull.UP
+button.direction = digitalio.Direction.INPUT
+
+stop = digitalio.DigitalInOut(board.D8) # red LED
+stop.direction = digitalio.Direction.OUTPUT
+
+caution = digitalio.DigitalInOut(board.D9) # yellow LED
+caution.direction = digitalio.Direction.OUTPUT
+
+go = digitalio.DigitalInOut(board.D10) # green LED
+go.direction = digitalio.Direction.OUTPUT
+
+position = 0 # starting position
+states = ["stop", "caution", "go"] # states
+state = " " # lcd print state
+x = 0 # array selection
+
+while True:
+    prestate = state #  reprint
+    position = encoder.position % 20 # finds ticks from 0
+    if (position < 7): # if stop
+        x = 0
+    elif (position > 12): # if go
+        x = 2
+    else: # if caution
+        x = 1
+    state = states[x] # sets state
+    if (button.value == False): # if button is pressed
+        stop.value = False
+        caution.value = False
+        go.value = False
+        if (state == "stop"): # turns on light
+            stop.value = True
+        elif (state == "caution"):
+            caution.value = True
+        else:
+            go.value = True
+    if (state != prestate): # reprints LCD data
+        lcd.clear()
+        lcd.set_cursor_pos(0,0)
+        lcd.print("Push for ")
+        lcd.set_cursor_pos(0,9)
+        lcd.print(state) # prints state of rotary encoder
+    time.sleep(0.1)
+    
+ ```
+    
+  ### Wiring and Evidence
+  
