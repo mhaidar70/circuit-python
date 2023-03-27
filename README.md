@@ -311,4 +311,4 @@ https://user-images.githubusercontent.com/112962044/227572134-3823a69d-66df-447f
 
 ## Reflection
 
-FOr this assignment I used a normal switch to control the power of the LCD because it was sucking up too much power so it was in the way of the code to run to the board. To fix this, we used a breadboard switch which is very useful and great. Of course, I didn't know what it was but I asked the teacher and learned to use breadboard switch.
+For this assignment I used a normal switch to control the power of the LCD because it was sucking up too much power so it was in the way of the code to run to the board. To fix this, we used a breadboard switch which is very useful and great. Of course, I didn't know what it was but I asked the teacher and learned to use breadboard switch.
