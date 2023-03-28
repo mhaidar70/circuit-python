@@ -331,7 +331,7 @@ import time
 i2c = board.I2C() # lcd declaration
 lcd = LCD(I2CPCF8574Interface(i2c, 0x3f), num_rows=2, num_cols=16)
 
-encoder = rotaryio.IncrementalEncoder(board.D3,board.D4) # rotary encoder potentiometer
+encoder = rotaryio.IncrementalEncoder(board.D3,board.D4) # rotary potentiometer
 
 button = digitalio.DigitalInOut(board.D2) # rotary  button
 button.pull = digitalio.Pull.UP
@@ -382,7 +382,11 @@ while True:
  ```
     
   ### Wiring and Evidence
-  
-![Screenshot 2023-03-27 115948](https://user-images.githubusercontent.com/112962044/227997629-539968ec-8210-4929-8c40-0efc9d050725.png)
-![Screenshot 2023-03-27 120014](https://user-images.githubusercontent.com/112962044/227997642-7097f86d-2626-418b-8616-bbe40f97cc21.png)
-![image](https://user-images.githubusercontent.com/112962044/227573108-f252c33a-947a-4217-ad08-97de725233bd.png)
+  ![Screenshot 2023-03-28 105222](https://user-images.githubusercontent.com/112962044/228278530-710a00f3-a6ad-4c74-bc69-2cddacc49353.png)
+
+
+https://user-images.githubusercontent.com/112962044/228279418-8cf198ad-c0ef-44f6-9719-9b9fa2b3d17e.mov
+
+## Reflection
+
+
