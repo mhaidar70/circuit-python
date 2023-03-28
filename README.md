@@ -2,12 +2,12 @@
 Directory of all students! (https://github.com/chssigma/Class_Accounts).
 ## Table of Contents
 * [Table of Contents](#TableOfContents)
-* [Hello_CircuitPython](#Hello_CircuitPython)
-* [CircuitPython_Servo](#CircuitPython_Servo)
-* [CircuitPython_LCD](#CircuitPython_LCD)
+* [Hello CircuitPython](#Hello_CircuitPython)
+* [CircuitPython Servo](#CircuitPython_Servo)
+* [CircuitPython LCD](#CircuitPython_LCD)
 * [Motor Control](#Motor_Control)
 * [Temperature Sensor](#Temperature_Sensor)
-* [Rotary Encoder](#Rotary Encoder)
+* [Rotary Encoder](#Rotary_Encoder)
 
 ---
 
