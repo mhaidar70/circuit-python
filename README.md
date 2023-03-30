@@ -432,4 +432,12 @@ while True:
  ```
         
   ## Evidence and Wiring
-  
+  ![Screenshot 2023-03-30 110832](https://user-images.githubusercontent.com/112962044/228881469-25850b56-8bde-4ea5-ba98-8ce5670e36b5.png)
+
+
+
+https://user-images.githubusercontent.com/112962044/228881677-fd2d83c3-901b-459d-b072-dc64e27a7275.mov
+
+## Reflection
+The hardest part for me to get this to work was by using monotonic function. It was a brand new function to me so I didn't know uch aout it so it was confusing as how to use it. But I learned it's very useful to use whenever time is involved with anything. It checks a specific time that a user can set. For example: our's was 4 seconds so we used 4. So whenever there is a project involved with time, I suggest using monotonic because it can make your life easier to check time. 
+
