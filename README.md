@@ -318,7 +318,7 @@ For this assignment I used a normal switch to control the power of the LCD becau
 ## Rotary Encoder
 
 ### Description and Code 
-
+THe assignment was to use a rotary encoder to change colors of led lights.
 
 ```python
 import board
@@ -390,3 +390,46 @@ https://user-images.githubusercontent.com/112962044/228279418-8cf198ad-c0ef-44f6
 ## Reflection
 The rotary encoder is a really useful tool to use in Engineering. Before it can be useful, it needs to have probems of course. For this assignment I had the correct wiring off the slideshow but the rotary enocder was not changing the color at all. The code was looking good as if it had no prolems or so I thought. I double checked my wiring on all of the stuff, but it was good. So that meant it was the code, I kept on looking through until I found the problem, the pins. I had wrote the wrong pins so it was not sending any signal through the encoder. I fixed the pins on the code and voila! It was up and running perfectly. So moral of story: check pins on board and the code because that could save you a lot of time. When you think everything is good, check the pins. It's the small things that cause the greatest headaches.
 
+
+### Photointerrupter
+
+## Description and Code
+This assignment was about using an LCD to display how many times a photointerrupter has been interrupted.
+
+```python
+import board
+from lcd.lcd import LCD # LCD liraries
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+import digitalio # photointerrupter is input
+import time
+
+i2c = board.I2C() # LCD declaration
+lcd = LCD(I2CPCF8574Interface(i2c, 0x3f), num_rows=2, num_cols=16)
+
+photo = digitalio.DigitalInOut(board.D3) # photointerrupter
+photo.direction = digitalio.Direction.INPUT
+
+interrupts = 0
+now = time.monotonic() # keeps time without using sleep()
+increase = False
+
+while True:
+    while (photo.value == True): # continues while being interrupted
+        increase = True
+    if (increase == True): # counts once per interrupt
+        interrupts += 1
+        increase = False
+    if (time.monotonic() - now >= 4): # prints every 4 seconds
+        lcd.clear()
+        lcd.set_cursor_pos(0,0)
+        lcd.print("The number of")
+        lcd.set_cursor_pos(1,0)
+        lcd.print("interrupts is ")
+        lcd.set_cursor_pos(1,14)
+        lcd.print(str(interrupts)) # prints number of interrupts
+        now = time.monotonic() # restarts counting
+ 
+ ```
+        
+  ## Evidence and Wiring
+  
