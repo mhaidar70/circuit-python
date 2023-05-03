@@ -1,5 +1,5 @@
 # CircuitPython
-Directory of all students! (https://github.com/chssigma/Class_Accounts).
+[Directory of all students](https://github.com/chssigma/Class_Accounts).
 ## Table of Contents
 * [Table of Contents](#TableOfContents)
 * [Hello CircuitPython](#Hello_CircuitPython)
@@ -8,7 +8,7 @@ Directory of all students! (https://github.com/chssigma/Class_Accounts).
 * [Motor Control](#Motor_Control)
 * [Temperature Sensor](#Temperature_Sensor)
 * [Rotary Encoder](#Rotary_Encoder)
-
+* [Photointerrupters](#photointerrupter)
 ---
 
 ## Hello_CircuitPython
@@ -440,4 +440,56 @@ https://user-images.githubusercontent.com/112962044/228881677-fd2d83c3-901b-459d
 
 ## Reflection
 The hardest part for me to get this to work was by using monotonic function. It was a brand new function to me so I didn't know uch aout it so it was confusing as how to use it. But I learned it's very useful to use whenever time is involved with anything. It checks a specific time that a user can set. For example: our's was 4 seconds so we used 4. So whenever there is a project involved with time, I suggest using monotonic because it can make your life easier to check time. 
+
+
+## Photointerrupter
+
+### Description
+
+We wired up a photinterrupter and coded it to track how many times it has been interrupted by displaying it every 4 seconds on a LCD screen. 
+
+### Wiring and Code
+![Screenshot 2023-05-03 140851](https://user-images.githubusercontent.com/112962044/236006089-5adb9660-6f90-4623-8968-ed9ecd07250a.png)
+
+```python
+import board
+from lcd.lcd import LCD # LCD liraries
+from lcd.i2c_pcf8574_interface import I2CPCF8574Interface
+import digitalio # photointerrupter is input
+import time
+
+i2c = board.I2C() # LCD declaration
+lcd = LCD(I2CPCF8574Interface(i2c, 0x3f), num_rows=2, num_cols=16)
+
+photo = digitalio.DigitalInOut(board.D3) # photointerrupter
+photo.direction = digitalio.Direction.INPUT
+
+interrupts = 0
+now = time.monotonic() # checks time without using sleep()
+increase = False
+
+while True:
+    while (photo.value == True): # continues while being interrupted
+        increase = True
+    if (increase == True): # counts once per interrupt
+        interrupts += 1
+        increase = False
+    if (time.monotonic() - now >= 4): # prints every 4 seconds
+        lcd.clear()
+        lcd.set_cursor_pos(0,0)
+        lcd.print("The number of")
+        lcd.set_cursor_pos(1,0)
+        lcd.print("interrupts is ")
+        lcd.set_cursor_pos(1,14)
+        lcd.print(str(interrupts)) # prints number of interrupts
+        now = time.monotonic() # restarts counting
+
+```
+
+### Video
+
+https://user-images.githubusercontent.com/112962044/236005448-ac2b11db-1543-457c-9f98-c898e55a8bf8.mov
+
+### Reflection
+
 
