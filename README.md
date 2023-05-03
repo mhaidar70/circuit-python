@@ -395,7 +395,7 @@ The rotary encoder is a really useful tool to use in Engineering. Before it can 
 
 ### Description
 
-We wired up a photinterrupter and coded it to track how many times it has been interrupted by displaying it every 4 seconds on a LCD screen. 
+We wired up a photointerrupter and coded it to track how many times it has been interrupted by displaying it every 4 seconds on a LCD screen. 
 
 ### Wiring and Code
 ![Screenshot 2023-05-03 140851](https://user-images.githubusercontent.com/112962044/236006089-5adb9660-6f90-4623-8968-ed9ecd07250a.png)
