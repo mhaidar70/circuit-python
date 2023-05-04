@@ -85,7 +85,10 @@ I had one problem with writing the pin for the servo. I didn't know that you had
 
 ## CircuitPython_LCD
 
-### Description & Code
+### Description
+
+For this assignment, we wired up and LCD and 2 buttons, which 1 button tells us how many times it has been pressed, and the other button tells us if it's counting up or down while displaying all of this on the LCD screen. 
+### Code
 
 ```python
 import board
@@ -136,7 +139,6 @@ while True: #sets button to add up and not count when held down
 
 
 ```
-Code for the LCD 
 ### Evidence
 
 
